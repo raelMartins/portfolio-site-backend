@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-site-backend",
+  "version": "1.0.0",
+  "description": "the backend to my portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raelMartins/portfolio-site-backend.git"
+  },
+  "author": "MartinsAkeredolu\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raelMartins/portfolio-site-backend/issues"
+  },
+  "homepage": "https://github.com/raelMartins/portfolio-site-backend#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
