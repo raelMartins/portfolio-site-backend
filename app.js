@@ -9,6 +9,10 @@ const projectRouter = require('./routes/project.route');
 const globalErrorHandler = require('./controllers/error.controller');
 const AppError = require('./utils/appError');
 
+const io = require('socket.io')(http, {
+  cors: { origin: '*' }
+});
+
 app.use(express.json());
 app.use(
   express.urlencoded({
@@ -55,6 +59,17 @@ app.all('*', (req, res, next) => {
 });
 
 app.use(globalErrorHandler);
+
+//Socket functions
+
+// io.on('connection', (socket) => {
+//   console.log(`A user connected: ${socket.id}`);
+
+//   socket.on('online', (user) => {
+//     console.log(`User Online: ${user}, Socket ID: ${socket.id}`);
+//     socket.broadcast.emit('user:online', { user, socketID: socket.id });
+//   });
+// });
 
 app.listen(PORT, () => {
   console.log('listening on port ' + PORT);
